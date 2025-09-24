@@ -1,0 +1,98 @@
+Voici les étapes détaillées pour créer un repository GitHub et publier une page statique :
+
+1. Préparation des fichiers
+Créez un dossier pour votre projet
+
+Ajoutez vos fichiers HTML, CSS, JS, images, etc.
+
+Votre page d'accueil doit s'appeler index.html
+
+2. Création du repository sur GitHub
+Connectez-vous à votre compte GitHub
+
+Cliquez sur le "+" en haut à droite → "New repository"
+
+Configurez le repository :
+
+Nom du repo (ex: mon-site-web)
+
+Description (optionnelle)
+
+Choisissez Public (gratuit) ou Private
+
+Cochez "Add a README file"
+
+Cliquez sur "Create repository"
+
+3. Configuration pour GitHub Pages
+Méthode 1 : Interface GitHub (recommandée pour débutants)
+Allez dans votre repository
+
+Cliquez sur Settings (onglet en haut)
+
+Dans le menu de gauche, cliquez sur Pages
+
+Dans "Source", sélectionnez "Deploy from a branch"
+
+Dans "Branch", choisissez :
+
+main (ou master) pour déployer tout le repo
+
+gh-pages pour déployer seulement le dossier docs/
+
+Cliquez sur Save
+
+Méthode 2 : Via une branche gh-pages
+bash
+# Cloner le repo localement
+git clone https://github.com/votre-username/mon-site-web.git
+cd mon-site-web
+
+# Créer une branche gh-pages
+git checkout -b gh-pages
+
+# Ajouter vos fichiers
+git add .
+git commit -m "Ajout du site statique"
+git push origin gh-pages
+4. Accéder à votre site
+Votre site sera disponible à l'adresse :
+
+text
+https://votre-username.github.io/nom-du-repo/
+5. Structure recommandée
+text
+mon-site-web/
+├── index.html
+├── styles/
+│   └── style.css
+├── scripts/
+│   └── script.js
+└── images/
+    └── logo.png
+6. Bonnes pratiques
+Vérifiez les liens : utilisez des chemins relatifs (./styles/style.css)
+
+Testez localement avant de pousser sur GitHub
+
+Attendez quelques minutes après la configuration pour que le site soit déployé
+
+Vérifiez l'onglet "Actions" pour voir le statut du déploiement
+
+Exemple de fichier index.html de base
+html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>Bienvenue sur mon site !</h1>
+    <p>Ce site est hébergé sur GitHub Pages.</p>
+</body>
+</html>
+Votre site sera en ligne quelques minutes après la configuration ! 🚀
+
